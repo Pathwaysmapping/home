@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bayode Emmanuel Ozovehe | Registered Surveyor</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a1628;
+    --navy-mid: #0f1f3a;
+    --navy-light: #1a2f50;
+    --gold: #c9a84c;
+    --gold-light: #e2c47a;
+    --gold-pale: #f5e9c8;
+    --cream: #f0ead8;
+    --muted: #8a9ab5;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--navy);
+    color: var(--cream);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 60px;
+    background: rgba(10,22,40,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px; font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 1px;
+  }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a {
+    font-size: 13px; font-weight: 500; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--muted);
+    text-decoration: none; transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 120px 60px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: 0; right: 0;
+    width: 55%; height: 100%;
+    background: linear-gradient(135deg, transparent 0%, rgba(201,168,76,0.04) 100%);
+    border-left: 1px solid rgba(201,168,76,0.1);
+  }
+  .hero-grid-bg {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background-image:
+      linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+  .hero-content { position: relative; z-index: 2; max-width: 700px; }
+  .hero-eyebrow {
+    font-size: 11px; font-weight: 500; letter-spacing: 4px;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 24px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .hero-eyebrow::before {
+    content: ''; width: 40px; height: 1px; background: var(--gold);
+  }
+  .hero-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(52px, 7vw, 88px);
+    font-weight: 700; line-height: 1.0;
+    color: var(--cream); margin-bottom: 12px;
+  }
+  .hero-name span { color: var(--gold); }
+  .hero-title {
+    font-size: 15px; font-weight: 300; color: var(--muted);
+    letter-spacing: 2px; text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  .hero-title strong { color: var(--gold-light); font-weight: 500; }
+  .hero-desc {
+    font-size: 17px; line-height: 1.8; color: #b0bdd4;
+    max-width: 560px; margin-bottom: 48px;
+  }
+  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--gold); color: var(--navy);
+    padding: 14px 32px; border-radius: 2px;
+    font-size: 13px; font-weight: 600; letter-spacing: 1.5px;
+    text-transform: uppercase; text-decoration: none;
+    transition: all 0.3s; border: none; cursor: pointer;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: transparent; color: var(--cream);
+    padding: 14px 32px; border-radius: 2px;
+    border: 1px solid rgba(201,168,76,0.4);
+    font-size: 13px; font-weight: 500; letter-spacing: 1.5px;
+    text-transform: uppercase; text-decoration: none;
+    transition: all 0.3s;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+  .hero-stats {
+    position: absolute; right: 60px; bottom: 80px;
+    display: flex; gap: 48px;
+  }
+  .stat { text-align: center; }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px; font-weight: 700; color: var(--gold);
+    line-height: 1;
+  }
+  .stat-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-top: 6px; }
+
+  /* ── SECTIONS ── */
+  section { padding: 100px 60px; }
+  .section-header { margin-bottom: 64px; }
+  .section-tag {
+    font-size: 11px; font-weight: 500; letter-spacing: 4px;
+    text-transform: uppercase; color: var(--gold);
+    display: flex; align-items: center; gap: 16px;
+    margin-bottom: 16px;
+  }
+  .section-tag::before { content: ''; width: 32px; height: 1px; background: var(--gold); }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 52px); font-weight: 700;
+    color: var(--cream); line-height: 1.15;
+  }
+
+  /* ── ABOUT ── */
+  .about { background: var(--navy-mid); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .about-text { font-size: 16px; line-height: 1.9; color: #b0bdd4; }
+  .about-text p { margin-bottom: 20px; }
+  .about-text strong { color: var(--gold-light); font-weight: 500; }
+  .about-details { display: flex; flex-direction: column; gap: 20px; }
+  .about-item {
+    border-left: 2px solid var(--gold);
+    padding: 16px 20px;
+    background: rgba(201,168,76,0.04);
+  }
+  .about-item-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+  .about-item-value { font-size: 15px; color: var(--cream); font-weight: 400; }
+
+  /* ── SERVICES ── */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+  .service-card {
+    background: var(--navy-mid);
+    padding: 40px 32px;
+    border-top: 2px solid transparent;
+    transition: all 0.3s;
+    position: relative; overflow: hidden;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 2px; background: var(--gold);
+    transform: scaleX(0); transition: transform 0.3s;
+  }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-card:hover { background: var(--navy-light); }
+  .service-icon {
+    font-size: 28px; margin-bottom: 20px;
+    display: block;
+  }
+  .service-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; font-weight: 600;
+    color: var(--cream); margin-bottom: 12px;
+  }
+  .service-desc { font-size: 14px; line-height: 1.8; color: var(--muted); }
+
+  /* ── PROJECTS ── */
+  .projects { background: var(--navy-mid); }
+  .projects-list { display: flex; flex-direction: column; gap: 2px; }
+  .project-item {
+    background: var(--navy);
+    padding: 36px 40px;
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    gap: 32px; align-items: start;
+    transition: all 0.3s;
+    border-left: 3px solid transparent;
+  }
+  .project-item:hover {
+    border-left-color: var(--gold);
+    background: var(--navy-light);
+    padding-left: 48px;
+  }
+  .project-year {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px; font-weight: 700;
+    color: rgba(201,168,76,0.25);
+    line-height: 1;
+  }
+  .project-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px; font-weight: 600;
+    color: var(--cream); margin-bottom: 8px;
+  }
+  .project-client {
+    font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 12px;
+  }
+  .project-desc { font-size: 14px; line-height: 1.8; color: var(--muted); }
+  .project-tag {
+    background: rgba(201,168,76,0.1);
+    color: var(--gold-light);
+    font-size: 11px; font-weight: 500; letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 14px; border-radius: 2px;
+    white-space: nowrap; align-self: start;
+  }
+
+  /* ── CONTACT ── */
+  .contact { position: relative; overflow: hidden; }
+  .contact::before {
+    content: '';
+    position: absolute; top: -200px; right: -200px;
+    width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .contact-info { }
+  .contact-intro { font-size: 16px; line-height: 1.9; color: #b0bdd4; margin-bottom: 40px; }
+  .contact-details { display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
+  .contact-line {
+    display: flex; align-items: center; gap: 16px;
+    font-size: 15px; color: var(--cream);
+  }
+  .contact-line-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--gold); flex-shrink: 0;
+  }
+  .contact-line a { color: var(--cream); text-decoration: none; transition: color 0.3s; }
+  .contact-line a:hover { color: var(--gold); }
+
+  .whatsapp-btn {
+    display: inline-flex; align-items: center; gap: 12px;
+    background: #25D366; color: #fff;
+    padding: 16px 36px; border-radius: 2px;
+    font-size: 14px; font-weight: 600; letter-spacing: 1px;
+    text-decoration: none; transition: all 0.3s;
+    text-transform: uppercase;
+  }
+  .whatsapp-btn:hover { background: #1ebe5d; transform: translateY(-2px); }
+  .whatsapp-icon { font-size: 20px; }
+
+  /* Social links */
+  .social-links { display: flex; flex-direction: column; gap: 12px; }
+  .social-link {
+    display: flex; align-items: center; gap: 16px;
+    padding: 16px 24px;
+    background: var(--navy-mid);
+    border: 1px solid rgba(201,168,76,0.1);
+    text-decoration: none;
+    transition: all 0.3s;
+    color: var(--cream);
+  }
+  .social-link:hover {
+    border-color: var(--gold);
+    background: rgba(201,168,76,0.06);
+    transform: translateX(6px);
+  }
+  .social-link-icon { font-size: 20px; width: 24px; text-align: center; }
+  .social-link-name { font-size: 13px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; }
+  .social-link-handle { font-size: 12px; color: var(--muted); margin-left: auto; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #060e1c;
+    padding: 40px 60px;
+    display: flex; align-items: center; justify-content: space-between;
+    border-top: 1px solid rgba(201,168,76,0.15);
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px; font-weight: 700; color: var(--gold);
+  }
+  .footer-text { font-size: 12px; color: var(--muted); }
+  .footer-surcon {
+    font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    color: rgba(201,168,76,0.5);
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-content > * {
+    animation: fadeUp 0.8s ease forwards;
+    opacity: 0;
+  }
+  .hero-eyebrow { animation-delay: 0.1s; }
+  .hero-name { animation-delay: 0.25s; }
+  .hero-title { animation-delay: 0.4s; }
+  .hero-desc { animation-delay: 0.55s; }
+  .hero-ctas { animation-delay: 0.7s; }
+  .hero-stats { animation: fadeUp 0.8s 0.9s ease forwards; opacity: 0; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    section { padding: 70px 24px; }
+    .hero { padding: 100px 24px 60px; }
+    .hero-stats { position: static; margin-top: 48px; justify-content: flex-start; }
+    .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .project-item { grid-template-columns: 60px 1fr; }
+    .project-tag { display: none; }
+    footer { flex-direction: column; gap: 12px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Surv. Bayode Emmanuel</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Registered Surveyor · SURCON Certified</div>
+    <h1 class="hero-name">Bayode<br>Emmanuel<br><span>Ozovehe</span></h1>
+    <p class="hero-title"><strong>Oil & Gas Specialist</strong> · Drone Mapping · Construction Surveys</p>
+    <p class="hero-desc">
+      A SURCON-registered professional surveyor with over a decade of field experience across oil & gas, road infrastructure, aviation, and boundary surveying in Nigeria. Delivering precision, compliance, and results on every engagement.
+    </p>
+    <div class="hero-ctas">
+      <a href="https://wa.me/2348165329943?text=Hello%20Surv.%20Emmanuel%2C%20I%20found%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20survey%20project." class="btn-primary" target="_blank">
+        💬 Chat on WhatsApp
+      </a>
+      <a href="#projects" class="btn-outline">View Projects</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">15+</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">5+</div>
+      <div class="stat-label">Major Projects</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">6</div>
+      <div class="stat-label">Survey Disciplines</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-header">
+    <div class="section-tag">About Me</div>
+    <h2 class="section-title">Precision Built on<br>Professional Foundation</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>
+        I am <strong>Bayode Emmanuel Ozovehe</strong>, a registered surveyor certified by the Surveyors Council of Nigeria (SURCON) with extensive field experience across some of Nigeria's most demanding infrastructure and oil & gas projects.
+      </p>
+      <p>
+        From coordinating topographic surveys for an aircraft MRO hangar in Ikeja to leading field data collection across 183km of road rehabilitation in Adamawa State, I bring technical rigour, CAD proficiency, and sound engineering judgment to every project.
+      </p>
+      <p>
+        Through <strong>Pathways Mapping Nigeria Limited</strong>, I also offer cutting-edge drone mapping and aerial data collection services — giving clients modern, efficient survey solutions backed by professional registration.
+      </p>
+      <p>
+        I am currently available for <strong>private consulting engagements</strong> across Lagos and nationwide.
+      </p>
+    </div>
+    <div class="about-details">
+      <div class="about-item">
+        <div class="about-item-label">Registration</div>
+        <div class="about-item-value">Surveyors Council of Nigeria (SURCON)</div>
+      </div>
+      <div class="about-item">
+        <div class="about-item-label">Company</div>
+        <div class="about-item-value">Pathways Mapping Nigeria Limited</div>
+      </div>
+      <div class="about-item">
+        <div class="about-item-label">Office Address</div>
+        <div class="about-item-value">140 Oyemekun Rd, beside Sterling Bank, Akure 340110, Ondo State</div>
+      </div>
+      <div class="about-item">
+        <div class="about-item-label">Current Role</div>
+        <div class="about-item-value">Contract Surveyor, Hammakopp Consortium · NestOil Group</div>
+      </div>
+      <div class="about-item">
+        <div class="about-item-label">Coverage</div>
+        <div class="about-item-value">Lagos · Nationwide (flexible)</div>
+      </div>
+      <div class="about-item">
+        <div class="about-item-label">Email</div>
+        <div class="about-item-value"><a href="mailto:ozoveheemmanuel@gmail.com" style="color:var(--gold-light);text-decoration:none;">ozoveheemmanuel@gmail.com</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-header">
+    <div class="section-tag">What I Offer</div>
+    <h2 class="section-title">Professional Survey<br>Services</h2>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-icon">📐</span>
+      <div class="service-name">Boundary & Cadastral Surveys</div>
+      <p class="service-desc">Accurate demarcation and documentation of land boundaries for individuals, developers, and institutions — fully SURCON compliant.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🗺️</span>
+      <div class="service-name">Topographic & Contour Surveys</div>
+      <p class="service-desc">Detailed elevation and terrain mapping for construction planning, drainage design, and site analysis using modern equipment.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🏗️</span>
+      <div class="service-name">Construction Setting-Out</div>
+      <p class="service-desc">Precise on-site layout of structures, roads, and infrastructure to ensure builds conform exactly to engineering designs.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">📋</span>
+      <div class="service-name">Land Title Verification</div>
+      <p class="service-desc">Supporting property transactions with verified boundary surveys, documentation support, and technical reports for legal practitioners.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">⛽</span>
+      <div class="service-name">Oil & Gas Field Surveys</div>
+      <p class="service-desc">Specialised surveying for oil and gas operations — pipeline routes, facility layouts, and as-built surveys for the energy sector.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🚁</span>
+      <div class="service-name">Drone Mapping & Aerial Data</div>
+      <p class="service-desc">Advanced UAV-based mapping and aerial data collection through Pathways Mapping Nigeria Limited — faster, more cost-efficient, highly accurate.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <div class="section-header">
+    <div class="section-tag">Selected Projects</div>
+    <h2 class="section-title">A Track Record of<br>Delivered Excellence</h2>
+  </div>
+  <div class="projects-list">
+
+    <div class="project-item">
+      <div class="project-year">2024</div>
+      <div>
+        <div class="project-client">Hammakopp Consortium · NestOil Group</div>
+        <div class="project-title">NESTAV MRO Aircraft Hangar — Ikeja, Lagos</div>
+        <p class="project-desc">Coordinated topographic surveys and precise building layout for a major aviation maintenance facility. Improved project efficiency through CAD designs and advised management on structural activities throughout construction.</p>
+      </div>
+      <div class="project-tag">Aviation</div>
+    </div>
+
+    <div class="project-item">
+      <div class="project-year">2024</div>
+      <div>
+        <div class="project-client">AG Vision Construction</div>
+        <div class="project-title">Mabushi, Kugbo & Central Area Bus Terminals — Abuja, FCT</div>
+        <p class="project-desc">Delivered accurate site layouts with full structural alignment across three terminal locations. Enhanced efficiency through CAD design workflows and provided technical reports and engineering recommendations to project management.</p>
+      </div>
+      <div class="project-tag">Infrastructure</div>
+    </div>
+
+    <div class="project-item">
+      <div class="project-year">2023</div>
+      <div>
+        <div class="project-client">AG Vision Construction</div>
+        <div class="project-title">183km Yola/Mubi Road Rehabilitation — Adamawa State</div>
+        <p class="project-desc">Led all field data collection operations and produced CAD designs to drive successful project execution across 183 kilometres of major road rehabilitation in the North-East.</p>
+      </div>
+      <div class="project-tag">Roads</div>
+    </div>
+
+    <div class="project-item">
+      <div class="project-year">2021–22</div>
+      <div>
+        <div class="project-client">Habibu Engineering</div>
+        <div class="project-title">25km Itas/Gadau Road & Bridges — Bauchi State</div>
+        <p class="project-desc">Designed virgin road grades using Civil 3D software for 100% compliance with engineering standards. Carried out all surveying activities for a new road and bridge construction project across challenging terrain.</p>
+      </div>
+      <div class="project-tag">Civil 3D</div>
+    </div>
+
+    <div class="project-item">
+      <div class="project-year">2011</div>
+      <div>
+        <div class="project-client">Tokyet Survey Limited</div>
+        <div class="project-title">Boundary Survey — Federal College of Agriculture, Akure</div>
+        <p class="project-desc">Conducted comprehensive boundary survey and demarcation for the Federal College of Agriculture, Akure — establishing precise cadastral records for a major federal institution in Ondo State.</p>
+      </div>
+      <div class="project-tag">Cadastral</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-header">
+    <div class="section-tag">Get In Touch</div>
+    <h2 class="section-title">Let's Work Together</h2>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <p class="contact-intro">
+        Whether you need a boundary survey, a construction setting-out, drone mapping, or a technical consultation — I am available for private engagements across Nigeria. Reach out via WhatsApp for the fastest response.
+      </p>
+      <div class="contact-details">
+        <div class="contact-line">
+          <div class="contact-line-dot"></div>
+          <a href="mailto:ozoveheemmanuel@gmail.com">ozoveheemmanuel@gmail.com</a>
+        </div>
+        <div class="contact-line">
+          <div class="contact-line-dot"></div>
+          <span>140 Oyemekun Rd, Akure, Ondo State</span>
+        </div>
+        <div class="contact-line">
+          <div class="contact-line-dot"></div>
+          <span>Pathways Mapping Nigeria Limited</span>
+        </div>
+      </div>
+      <a href="https://wa.me/2348165329943?text=Hello%20Surv.%20Emmanuel%2C%20I%20found%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20survey%20project." class="whatsapp-btn" target="_blank">
+        <span class="whatsapp-icon">💬</span>
+        Chat on WhatsApp
+      </a>
+    </div>
+
+    <div>
+      <div class="section-tag" style="margin-bottom:24px;">Follow & Connect</div>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/survemmanuelbayode" class="social-link" target="_blank">
+          <span class="social-link-icon">💼</span>
+          <span class="social-link-name">LinkedIn</span>
+          <span class="social-link-handle">survemmanuelbayode</span>
+        </a>
+        <a href="https://www.facebook.com/surv.emmanuelbayode" class="social-link" target="_blank">
+          <span class="social-link-icon">📘</span>
+          <span class="social-link-name">Facebook</span>
+          <span class="social-link-handle">surv.emmanuelbayode</span>
+        </a>
+        <a href="https://x.com/Pathways_map" class="social-link" target="_blank">
+          <span class="social-link-icon">✖</span>
+          <span class="social-link-name">X (Twitter)</span>
+          <span class="social-link-handle">@Pathways_map</span>
+        </a>
+        <a href="https://www.youtube.com/@Surv.EmmanuelBayode" class="social-link" target="_blank">
+          <span class="social-link-icon">▶</span>
+          <span class="social-link-name">YouTube</span>
+          <span class="social-link-handle">@Surv.EmmanuelBayode</span>
+        </a>
+        <a href="https://www.tiktok.com/@surv.emmanuelbayode" class="social-link" target="_blank">
+          <span class="social-link-icon">🎵</span>
+          <span class="social-link-name">TikTok</span>
+          <span class="social-link-handle">@surv.emmanuelbayode</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Surv. Bayode Emmanuel Ozovehe</div>
+  <div class="footer-text">© 2026 · Pathways Mapping Nigeria Limited · Akure, Ondo State</div>
+  <div class="footer-surcon">SURCON Registered & Certified</div>
+</footer>
+
+<script>
+  // Smooth scroll for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const el = document.querySelector(a.getAttribute('href'));
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  // Fade-in on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.service-card, .project-item, .about-item, .social-link').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
