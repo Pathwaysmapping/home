@@ -2,14 +2,14 @@
 
 ## 1. Company Profile & Identity
 - **Company Name**: Pathways Mapping & Geospatial Solutions
-- **Registration**: RC: 3088924 | Reg. Survey Firm: SURCON Certified
+- **Registration**: Corporate registration details withheld | Professionally registered practice
 - **Lead / Principal Surveyor**: Surv. Emmanuel Bayode
-  - **Credentials**: SURCON P/3160, MNIS, MNISP, A.M. ASCE, C-GIS, PMCP
+  - **Credentials**: MNIS, MNISP, A.M. ASCE, C-GIS, PMCP
   - **LinkedIn**: [Surv Emmanuel Bayode](https://www.linkedin.com/in/survemmanuelbayode/) | [Pathways Mapping](https://www.linkedin.com/company/pathwaysmapping/)
 - **Contact Channels**:
   - Office: Pathways Mapping Suites, Abuja & Lagos, Nigeria
-  - Inquiries: `info@pathwaysmapping.com` | `pathwaysmapping@gmail.com`
-  - Direct Line: `+234 803 248 8965` / `+234 815 677 3447`
+  - Inquiries: `official business email`
+  - Direct Line: `official business telephone`
 
 ---
 
@@ -48,12 +48,12 @@
 
 ## 5. Project Portfolio & Image Mapping
 Always match project portfolio cards with their correct, authentic photos:
-- **Nestoil Limited Aircraft Hangar**: Structural steel hangar construction & bolt alignment (`project-nestoil.jpg`).
-- **Golden Granules Ventures**: Industrial agro-processing compound and logistics infrastructure (`project-golden-granules.jpg`).
-- **SABEEL Estate Master Layout**: 45-hectare master subdivision and layout grid plotting (`project-sabeel-layout.jpg`).
-- **Fresh Catch Farms & Hydroponics**: Agricultural drone photogrammetry & multispectral crop health (`project-freshcatch-drone.jpg`).
-- **Adamawa State 42km Road Corridor**: Highway alignment, centerlines, and dual-carriageway cross-sections (`project-adamawa-road.jpg`).
-- **Abuja Regional Transport Terminals**: High-density urban multi-modal transport hub layout (`project-abuja-terminals.jpg`).
+- **Private Aircraft Hangar Client**: Structural steel hangar construction & bolt alignment (`project-aviation-hangar.jpg`).
+- **Agro-Industrial Client**: Industrial agro-processing compound and logistics infrastructure (`project-agro-industrial.jpg`).
+- **Private Estate Layout Client**: 45-hectare master subdivision and layout grid plotting (`project-estate-layout.jpg`).
+- **Agricultural Client**: Agricultural drone photogrammetry & multispectral crop health (`project-agricultural-drone.jpg`).
+- **Regional Highway Client**: Highway alignment, centerlines, and dual-carriageway cross-sections (`project-highway.jpg`).
+- **Urban Transport Infrastructure Client**: High-density urban multi-modal transport hub layout (`project-transport-terminal.jpg`).
 
 ---
 
