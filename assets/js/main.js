@@ -121,32 +121,47 @@
 
   /* ── Mobile navigation ────────────────────────────────────────────────── */
   var toggle = document.querySelector('.nav-toggle');
-  var nav = document.querySelector('.nav');
-  var navClose = document.querySelector('.nav-close');
-  if (toggle && nav) {
-    var scrim = document.createElement('div');
-    scrim.className = 'nav-scrim';
-    document.body.appendChild(scrim);
+  var mobileNav = document.getElementById('mobile-nav');
+  var mobileNavClose = document.querySelector('.mobile-nav-close');
+  var mobileNavScrim = document.querySelector('.mobile-nav-scrim');
 
-    var setNav = function (open) {
-      nav.classList.toggle('is-open', open);
-      scrim.classList.toggle('is-on', open);
+  if (toggle && mobileNav) {
+    var setMobileNav = function (open) {
+      mobileNav.classList.toggle('is-open', open);
+      mobileNav.setAttribute('aria-hidden', String(!open));
       toggle.setAttribute('aria-expanded', String(open));
       document.body.style.overflow = open ? 'hidden' : '';
     };
 
-    toggle.addEventListener('click', function () {
-      setNav(!nav.classList.contains('is-open'));
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      var isOpen = mobileNav.classList.contains('is-open');
+      setMobileNav(!isOpen);
     });
-    if (navClose) {
-      navClose.addEventListener('click', function () { setNav(false); });
+
+    if (mobileNavClose) {
+      mobileNavClose.addEventListener('click', function (e) {
+        e.preventDefault();
+        setMobileNav(false);
+      });
     }
-    scrim.addEventListener('click', function () { setNav(false); });
-    nav.addEventListener('click', function (e) {
-      if (e.target.closest('a')) setNav(false);
+
+    if (mobileNavScrim) {
+      mobileNavScrim.addEventListener('click', function () {
+        setMobileNav(false);
+      });
+    }
+
+    mobileNav.addEventListener('click', function (e) {
+      if (e.target.closest('a')) {
+        setMobileNav(false);
+      }
     });
+
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') setNav(false);
+      if (e.key === 'Escape' && mobileNav.classList.contains('is-open')) {
+        setMobileNav(false);
+      }
     });
   }
 

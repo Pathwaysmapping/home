@@ -1,5 +1,5 @@
 /* Pathways Mapping Nigeria Limited — Progressive Web App Service Worker */
-const CACHE_NAME = 'pathways-mapping-v2.3.0';
+const CACHE_NAME = 'pathways-mapping-v2.4.0';
 
 const PRECACHE_ASSETS = [
   '/',
