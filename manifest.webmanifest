@@ -1,0 +1,69 @@
+{
+  "id": "/",
+  "name": "Pathways Mapping Nigeria Limited",
+  "short_name": "Pathways GIS",
+  "description": "SURCON-registered surveying, GIS, and drone mapping consultancy in Akure, Ondo State. Professional engineering, cadastral, and UAV survey services.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#15204f",
+  "background_color": "#0a1230",
+  "categories": ["business", "productivity", "utilities", "education"],
+  "icons": [
+    {
+      "src": "assets/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/img/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/img/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Request Survey Quote",
+      "short_name": "Get Quote",
+      "url": "contact.html#quote",
+      "description": "Request an official written quotation for site surveying",
+      "icons": [{ "src": "assets/img/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Scope & Fee Estimator",
+      "short_name": "Estimator",
+      "url": "index.html#estimator",
+      "description": "Interactive survey scope and duration calculator",
+      "icons": [{ "src": "assets/img/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Geospatial Institute",
+      "short_name": "Training",
+      "url": "training.html",
+      "description": "Explore 12 geospatial training programmes in Akure",
+      "icons": [{ "src": "assets/img/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Project Portfolio",
+      "short_name": "Projects",
+      "url": "projects.html",
+      "description": "Track record across aviation, roads, and infrastructure",
+      "icons": [{ "src": "assets/img/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "PM-2026-Q103",
+    "createdAt": "2026-09-13T14:07:02.626Z",
+    "name": "Engr. Tunde Adeleke",
+    "organisation": "",
+    "phone": "08031234567",
+    "email": "",
+    "service": "topographic",
+    "location": "Akure, Ondo",
+    "size": "Standard Parcel",
+    "timeline": "Standard",
+    "details": "Topographic contour survey for 5 hectares commercial estate",
+    "status": "Received & Logged"
+  },
+  {
+    "id": "PM-2026-Q101",
+    "createdAt": "2026-09-10T10:15:00.000Z",
+    "name": "Engr. Tunde Adeyemi",
+    "organisation": "Korede Construction Ltd",
+    "phone": "+234 803 456 7890",
+    "email": "tunde.adeyemi@korede.ng",
+    "service": "topographic",
+    "serviceName": "Topographic & Contour Survey",
+    "location": "Ondo Town, Ondo State",
+    "size": "15 Hectares",
+    "timeline": "Within 2 weeks",
+    "details": "Need 0.5m interval contour mapping and spot heights for proposed private residential estate site grading and drainage master plan.",
+    "status": "Quotation Sent",
+    "estimatedDays": "4 field days + 3 office processing days",
+    "leadType": "Corporate Tender"
+  },
+  {
+    "id": "PM-2026-Q102",
+    "createdAt": "2026-09-11T14:30:00.000Z",
+    "name": "Barrister Chinedu Okonkwo",
+    "organisation": "Apex Legal Chambers",
+    "phone": "+234 812 345 6789",
+    "email": "c.okonkwo@apexlegal.ng",
+    "service": "cadastral",
+    "serviceName": "Cadastral Boundary Survey",
+    "location": "Alagbaka GRA, Akure",
+    "size": "4 Plots (approx 2,600 sqm)",
+    "timeline": "As soon as possible",
+    "details": "Title boundary confirmation and beacon renewal for Governor's Consent lodgement with Ondo State Ministry of Lands.",
+    "status": "Site Recon Scheduled",
+    "estimatedDays": "1 field day + 2 processing days",
+    "leadType": "Statutory Title"
+  }
+]

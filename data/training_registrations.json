@@ -1,0 +1,38 @@
+[
+  {
+    "id": "PGI-2026-T103",
+    "createdAt": "2026-09-13T14:07:05.409Z",
+    "name": "Amina Yusuf",
+    "phone": "08099887766",
+    "email": "",
+    "course": "Drone Mapping & Photogrammetry",
+    "format": "Physical — Akure",
+    "level": "Student / graduate",
+    "notes": "",
+    "status": "Interest Registered"
+  },
+  {
+    "id": "PGI-2026-T101",
+    "createdAt": "2026-09-08T09:20:00.000Z",
+    "name": "Kelechi Nnamdi",
+    "phone": "+234 809 112 3344",
+    "email": "k.nnamdi@gmail.com",
+    "course": "Drone Mapping & Photogrammetry",
+    "format": "Physical — Akure",
+    "level": "Student / graduate",
+    "notes": "Surveying graduate from FUTA wanting hands-on UAV flight planning and Pix4D/Metashape processing skills.",
+    "status": "Waitlist Confirmed"
+  },
+  {
+    "id": "PGI-2026-T102",
+    "createdAt": "2026-09-09T16:45:00.000Z",
+    "name": "Folashade Awolowo",
+    "phone": "+234 805 998 8776",
+    "email": "folashade.a@environ.org",
+    "course": "GIS Fundamentals with QGIS & ArcGIS",
+    "format": "Live online",
+    "level": "Some working experience",
+    "notes": "Environmental researcher looking to build spatial geodatabases for watershed analysis in Ondo and Ekiti.",
+    "status": "Waitlist Confirmed"
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "name": "Pathways Mapping Nigeria Limited",
+  "description": "SURCON-registered surveying, GIS and drone mapping consultancy in Akure, Ondo State. Topographic, cadastral, engineering, mining cadastral and UAV survey services nationwide.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
